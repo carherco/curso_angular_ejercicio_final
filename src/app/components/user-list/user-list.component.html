@@ -1,0 +1,18 @@
+<h3>Listado de Usuarios</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Foto</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tr *ngFor="let user of users">
+    <td>{{user.first_name}}</td>
+    <td>{{user.last_name}}</td>
+    <td><img [src]="user.avatar"/></td>
+    <td><a class="btn btn-primary" [routerLink]="['/user/edit', user.id]">Editar</a></td>
+  </tr>
+</table>
